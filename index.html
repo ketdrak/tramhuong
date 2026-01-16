@@ -14,7 +14,7 @@
     }
   </style>
 </head>
-<body class="bg-amber-50 text-gray-800">
+<body class="bg-amber-100 text-gray-800 min-h-screen flex flex-col">
 
   <!-- Header -->
   <header class="bg-amber-900 text-amber-100 shadow">
@@ -31,7 +31,17 @@
   </header>
 
   <!-- Main -->
-  <main class="max-w-7xl mx-auto p-6">
+  <main class="max-w-7xl mx-auto p-6 flex-1">
+    <div class="grid md:grid-cols-12 gap-6">
+      <!-- Khung trái -->
+      <aside class="md:col-span-2 bg-amber-200 rounded-lg p-4 shadow text-sm">
+        <h3 class="font-semibold mb-2">Thông tin</h3>
+        <p>Nhang trầm tự nhiên</p>
+        <p>Uy tín – Chất lượng</p>
+      </aside>
+
+      <!-- Nội dung chính -->
+      <div class="md:col-span-8">
 
     <!-- Giới thiệu -->
     <section id="gioithieu">
@@ -61,9 +71,9 @@
     <!-- Liên hệ -->
     <section id="lienhe" class="hidden">
       <h2 class="text-2xl font-bold mb-4">Liên hệ</h2>
-      <p>📞 Điện thoại: 0xxx xxx xxx</p>
-      <p>📍 Địa chỉ: Việt Nam</p>
-      <p>📧 Email: ketdraktramhương@email.com</p>
+      <p>📞 Điện thoại: 0379 344 597</p>
+      <p>📍 Địa chỉ: Đồng Dương, Tp Đà Nẵng</p>
+      <p>📧 Email: doket.drak@outlook.com</p>
     </section>
 
     <!-- Góp ý -->
@@ -80,7 +90,11 @@
       <p class="mt-4 font-bold">Tổng tiền: <span id="totalPrice">0</span>đ</p>
     </section>
 
-  </main>
+        </div>
+
+      <!-- Khung phải -->
+      <aside class="md:col-span-2 bg-amber-200 rounded-lg p-4 shadow text-sm">
+        <h
 
   <!-- Footer -->
   <footer class="bg-amber-900 text-amber-100 text-center p-4 mt-10">
@@ -119,4 +133,3 @@
 
 </body>
 </html>
-
