@@ -21,6 +21,7 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
       <h1 class="text-xl font-bold">KẾT DRAK TRẦM HƯƠNG</h1>
       <nav class="space-x-4">
+        <button onclick="showSection('login')">Admin</button>
         <button onclick="showSection('gioithieu')">Giới thiệu</button>
         <button onclick="showSection('sanpham')">Sản phẩm</button>
         <button onclick="showSection('lienhe')">Liên hệ</button>
@@ -71,9 +72,9 @@
     <!-- Liên hệ -->
     <section id="lienhe" class="hidden">
       <h2 class="text-2xl font-bold mb-4">Liên hệ</h2>
-      <p>📞 Điện thoại: 0379 344 597</p>
-      <p>📍 Địa chỉ: Đồng Dương, Tp Đà Nẵng</p>
-      <p>📧 Email: doket.drak@outlook.com</p>
+      <p>📞 Điện thoại: 0xxx xxx xxx</p>
+      <p>📍 Địa chỉ: Việt Nam</p>
+      <p>📧 Email: ketdraktramhương@email.com</p>
     </section>
 
     <!-- Góp ý -->
@@ -81,6 +82,14 @@
       <h2 class="text-2xl font-bold mb-4">Góp ý</h2>
       <textarea class="w-full border rounded p-3" rows="4" placeholder="Nhập góp ý của bạn..."></textarea>
       <button class="mt-3 bg-amber-700 text-white px-4 py-2 rounded">Gửi góp ý</button>
+    </section>
+
+        <!-- Đăng nhập Admin -->
+    <section id="login" class="hidden">
+      <h2 class="text-2xl font-bold mb-4">Đăng nhập Admin</h2>
+      <input class="border p-2 w-full mb-3" placeholder="Tên đăng nhập" />
+      <input type="password" class="border p-2 w-full mb-3" placeholder="Mật khẩu" />
+      <button class="bg-amber-800 text-white px-4 py-2 rounded">Đăng nhập</button>
     </section>
 
     <!-- Giỏ hàng -->
@@ -94,10 +103,15 @@
 
       <!-- Khung phải -->
       <aside class="md:col-span-2 bg-amber-200 rounded-lg p-4 shadow text-sm">
-        <h
+        <h3 class="font-semibold mb-2">Hỗ trợ</h3>
+        <p>📞 Zalo / Điện thoại</p>
+        <p>🚚 Giao hàng toàn quốc</p>
+      </aside>
+    </div>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-amber-900 text-amber-100 text-center p-4 mt-10">
+  <footer class="bg-amber-900 text-amber-100 p-4 flex items-center justify-center">
     © 2025 Kết Drak Trầm Hương — Thiết kế bởi Đỗ Kết
   </footer>
 
