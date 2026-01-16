@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KẾT DRAK TRẦM HƯƠNG</title>
 
-  <!-- TailwindCSS CDN -->
+  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -15,165 +15,187 @@
   </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+<body class="bg-amber-50 text-gray-800 min-h-screen flex flex-col">
 
-  <!-- Header -->
-  <header class="bg-amber-900 text-amber-100 shadow">
-    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-      <h1 class="text-xl font-bold">KẾT DRAK TRẦM HƯƠNG</h1>
-      <nav class="space-x-4 text-sm">
-        <button onclick="showSection('login')">Admin</button>
-        <button onclick="showSection('gioithieu')">Giới thiệu</button>
-        <button onclick="showSection('sanpham')">Sản phẩm</button>
-        <button onclick="showSection('lienhe')">Liên hệ</button>
-        <button onclick="showSection('gopy')">Góp ý</button>
-        <button onclick="showSection('giohang')" class="bg-amber-700 px-3 py-1 rounded">
-          🛒 Giỏ hàng (<span id="cartCount">0</span>)
-        </button>
-      </nav>
-    </div>
-  </header>
+<!-- HEADER -->
+<header class="bg-amber-900 text-amber-100 shadow">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
+    <h1 class="text-xl font-bold">KẾT DRAK TRẦM HƯƠNG</h1>
+    <nav class="flex flex-wrap gap-3 text-sm">
+      <button onclick="showSection('gioithieu')">Giới thiệu</button>
+      <button onclick="showSection('sanpham')">Sản phẩm</button>
+      <button onclick="showSection('lienhe')">Liên hệ</button>
+      <button onclick="showSection('gopy')">Góp ý</button>
+      <button onclick="showSection('login')">Admin</button>
+      <button onclick="showSection('giohang')" class="bg-amber-700 px-3 py-1 rounded">
+        🛒 Giỏ hàng (<span id="cartCount">0</span>)
+      </button>
+    </nav>
+  </div>
+</header>
 
-  <!-- Main -->
-  <main class="max-w-7xl mx-auto p-6 flex-1 w-full">
-    <!-- Khung bao tổng -->
-    <div class="bg-white rounded-2xl shadow-xl p-6">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto w-full flex-1 p-4">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
 
-        <!-- Khung trái -->
-        <aside class="md:col-span-2 bg-amber-50 border border-amber-200 rounded-xl p-4 shadow-sm text-sm">
-          <h3 class="font-semibold mb-3 text-amber-800 text-center">Thông tin</h3>
-          <p>🌿 Nhang trầm tự nhiên</p>
-          <p>🔥 Hương thơm thuần khiết</p>
-          <p>🙏 Phù hợp thờ cúng</p>
-          <p>⭐ Uy tín – Chất lượng</p>
-        </aside>
+    <!-- KHUNG TRÁI -->
+    <aside class="md:col-span-2 bg-amber-100 rounded-xl p-4 shadow text-sm">
+      <h3 class="font-semibold mb-2">🌿 Thông tin</h3>
+      <p><strong>Trầm hương tự nhiên</strong></p>
+      <p>Không hóa chất</p>
+      <p>Phong thủy – Thiền định</p>
+    </aside>
 
-        <!-- Nội dung chính -->
-        <div class="md:col-span-8 bg-white rounded-xl p-6 shadow-sm">
+    <!-- NỘI DUNG GIỮA -->
+    <section class="md:col-span-8 bg-white rounded-xl p-6 shadow">
 
-          <!-- Giới thiệu -->
-          <section id="gioithieu">
-            <h2 class="text-2xl font-bold mb-4 text-amber-800">Giới thiệu</h2>
-            <p>
-              KẾT DRAK TRẦM HƯƠNG chuyên cung cấp các sản phẩm
-              <strong>nhang trầm hương, nụ trầm</strong> tự nhiên,
-              mùi hương thuần khiết, phù hợp thờ cúng, thiền định
-              và thư giãn tinh thần.
-            </p>
-          </section>
+      <!-- GIỚI THIỆU -->
+      <div id="gioithieu">
+        <h2 class="text-2xl font-bold text-amber-900 mb-4">
+          KẾT DRAK TRẦM HƯƠNG
+        </h2>
 
-          <!-- Sản phẩm -->
-          <section id="sanpham" class="hidden">
-            <h2 class="text-2xl font-bold mb-4 text-amber-800">Sản phẩm</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div class="border rounded-xl p-4 shadow-sm">
-                <h3 class="font-semibold text-lg">Nhang trầm hương</h3>
-                <p class="text-sm">Hương thơm dịu, cháy đều</p>
-                <p class="font-bold mt-2">150.000đ</p>
-                <button onclick="addToCart('Nhang trầm hương',150000)"
-                  class="mt-3 bg-amber-800 text-white px-4 py-2 rounded w-full">
-                  Thêm vào giỏ
-                </button>
-              </div>
+        <p class="italic text-amber-700 mb-4">
+          <strong>Kết hương dưỡng khí – Phúc chí tâm an</strong>
+        </p>
 
-              <div class="border rounded-xl p-4 shadow-sm">
-                <h3 class="font-semibold text-lg">Nụ trầm hương</h3>
-                <p class="text-sm">Phù hợp thiền, xông phòng</p>
-                <p class="font-bold mt-2">120.000đ</p>
-                <button onclick="addToCart('Nụ trầm hương',120000)"
-                  class="mt-3 bg-amber-800 text-white px-4 py-2 rounded w-full">
-                  Thêm vào giỏ
-                </button>
-              </div>
-            </div>
-          </section>
+        <p class="mb-4">
+          <strong>Kết Drak Trầm Hương</strong> ra đời với sứ mệnh mang đến những giá trị
+          <strong>thuần khiết – an lành – phong thủy tốt lành</strong> thông qua các sản phẩm
+          <strong>trầm hương tự nhiên</strong>, được tuyển chọn kỹ lưỡng từ nguồn nguyên liệu
+          chất lượng cao.
+        </p>
 
-          <!-- Liên hệ -->
-          <section id="lienhe" class="hidden">
-            <h2 class="text-2xl font-bold mb-4 text-amber-800">Liên hệ</h2>
-            <p>📞 Điện thoại: 0379344597</p>
-            <p>📍 Địa chỉ: Đồng Dương, Tp Đà Nẵng</p>
-            <p>📧 Email: doket.drak@outlook.com</p>
-          </section>
+        <p class="mb-4">
+          Chúng tôi tin rằng <strong>trầm hương không chỉ là hương thơm</strong>,
+          mà còn là cầu nối giữa <strong>thiên nhiên – tâm thức – năng lượng sống</strong>.
+          Mỗi nén trầm, mỗi sợi hương đều được tạo nên bằng
+          <strong>sự tỉ mỉ, tâm huyết và tôn trọng tuyệt đối giá trị truyền thống</strong>.
+        </p>
 
-          <!-- Góp ý -->
-          <section id="gopy" class="hidden">
-            <h2 class="text-2xl font-bold mb-4 text-amber-800">Góp ý</h2>
-            <textarea class="w-full border rounded p-3" rows="4"
-              placeholder="Nhập góp ý của bạn..."></textarea>
-            <button class="mt-3 bg-amber-700 text-white px-4 py-2 rounded">
-              Gửi góp ý
-            </button>
-          </section>
+        <h3 class="font-semibold text-lg text-amber-900 mt-6 mb-2">
+          🌿 Giá trị cốt lõi
+        </h3>
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong>Trầm hương tự nhiên 100%</strong> – nói không với hóa chất</li>
+          <li><strong>Hương thơm thanh khiết</strong> – dịu nhẹ, sâu lắng</li>
+          <li><strong>Ứng dụng phong thủy – thiền định – thờ cúng</strong></li>
+          <li>Đặt chữ <strong>“Tâm”</strong> lên hàng đầu</li>
+        </ul>
 
-          <!-- Đăng nhập Admin -->
-          <section id="login" class="hidden">
-            <h2 class="text-2xl font-bold mb-4 text-amber-800">Đăng nhập Admin</h2>
-            <input class="border p-2 w-full mb-3" placeholder="Tên đăng nhập" />
-            <input type="password" class="border p-2 w-full mb-3" placeholder="Mật khẩu" />
-            <button class="bg-amber-800 text-white px-4 py-2 rounded">
-              Đăng nhập
-            </button>
-          </section>
-
-          <!-- Giỏ hàng -->
-          <section id="giohang" class="hidden">
-            <h2 class="text-2xl font-bold mb-4 text-amber-800">Giỏ hàng</h2>
-            <ul id="cartItems" class="space-y-2"></ul>
-            <p class="mt-4 font-bold">
-              Tổng tiền: <span id="totalPrice">0</span>đ
-            </p>
-          </section>
-
-        </div>
-
-        <!-- Khung phải -->
-        <aside class="md:col-span-2 bg-amber-50 border border-amber-200 rounded-xl p-4 shadow-sm text-sm">
-          <h3 class="font-semibold mb-3 text-amber-800 text-center">Hỗ trợ</h3>
-          <p>📞 Zalo: 0379344597</p>
-          <p>🚚 Giao hàng toàn quốc</p>
-          <p>💬 Tư vấn tận tâm</p>
-        </aside>
-
+        <p class="mt-4">
+          <strong>Kết Drak Trầm Hương</strong> mong muốn đồng hành cùng bạn trong những khoảnh
+          khắc tĩnh lặng, giúp <strong>an tâm – tụ khí – lan tỏa phúc lành</strong>
+          cho gia đình và không gian sống.
+        </p>
       </div>
-    </div>
-  </main>
 
-  <!-- Footer -->
-  <footer class="bg-amber-900 text-amber-100 p-4 flex items-center justify-center">
-    © 2025 Kết Drak Trầm Hương — Thiết kế bởi Đỗ Kết
-  </footer>
+      <!-- SẢN PHẨM -->
+      <div id="sanpham" class="hidden">
+        <h2 class="text-2xl font-bold mb-4 text-amber-900">Sản phẩm</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border rounded p-4 text-center">
+            <h3 class="font-semibold">Nhang trầm hương</h3>
+            <p class="text-sm">Hương dịu – cháy đều</p>
+            <p class="font-bold mt-2">150.000đ</p>
+            <button onclick="addToCart('Nhang trầm hương',150000)"
+              class="mt-3 bg-amber-800 text-white px-4 py-2 rounded">
+              Thêm vào giỏ
+            </button>
+          </div>
 
-  <!-- Script -->
-  <script>
-    let cart = [];
+          <div class="border rounded p-4 text-center">
+            <h3 class="font-semibold">Nụ trầm hương</h3>
+            <p class="text-sm">Thiền – xông phòng</p>
+            <p class="font-bold mt-2">120.000đ</p>
+            <button onclick="addToCart('Nụ trầm hương',120000)"
+              class="mt-3 bg-amber-800 text-white px-4 py-2 rounded">
+              Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </div>
 
-    function showSection(id) {
-      document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
-    }
+      <!-- LIÊN HỆ -->
+      <div id="lienhe" class="hidden">
+        <h2 class="text-2xl font-bold mb-4 text-amber-900">Liên hệ</h2>
+        <p><strong>Đỗ Kết</strong></p>
+        <p>📍 Xã Đồng Dương, TP. Đà Nẵng</p>
+        <p>📞 0379 344 597</p>
+      </div>
 
-    function addToCart(name, price) {
-      cart.push({ name, price });
-      document.getElementById('cartCount').innerText = cart.length;
-      renderCart();
-    }
+      <!-- GÓP Ý -->
+      <div id="gopy" class="hidden">
+        <h2 class="text-2xl font-bold mb-4 text-amber-900">Góp ý</h2>
+        <textarea class="w-full border rounded p-3" rows="4"
+          placeholder="Nhập góp ý của bạn..."></textarea>
+        <button class="mt-3 bg-amber-700 text-white px-4 py-2 rounded">
+          Gửi góp ý
+        </button>
+      </div>
 
-    function renderCart() {
-      const list = document.getElementById('cartItems');
-      const total = document.getElementById('totalPrice');
-      list.innerHTML = '';
-      let sum = 0;
-      cart.forEach(item => {
-        sum += item.price;
-        const li = document.createElement('li');
-        li.textContent = `${item.name} - ${item.price.toLocaleString()}đ`;
-        list.appendChild(li);
-      });
-      total.innerText = sum.toLocaleString();
-    }
-  </script>
+      <!-- ADMIN -->
+      <div id="login" class="hidden">
+        <h2 class="text-2xl font-bold mb-4 text-amber-900">Đăng nhập Admin</h2>
+        <input class="border p-2 w-full mb-3" placeholder="Tên đăng nhập">
+        <input type="password" class="border p-2 w-full mb-3" placeholder="Mật khẩu">
+        <button class="bg-amber-800 text-white px-4 py-2 rounded">Đăng nhập</button>
+      </div>
+
+      <!-- GIỎ HÀNG -->
+      <div id="giohang" class="hidden">
+        <h2 class="text-2xl font-bold mb-4 text-amber-900">Giỏ hàng</h2>
+        <ul id="cartItems" class="space-y-2"></ul>
+        <p class="mt-4 font-bold">Tổng tiền: <span id="totalPrice">0</span>đ</p>
+      </div>
+
+    </section>
+
+    <!-- KHUNG PHẢI -->
+    <aside class="md:col-span-2 bg-amber-100 rounded-xl p-4 shadow text-sm">
+      <h3 class="font-semibold mb-2">📞 Hỗ trợ</h3>
+      <p>Zalo: 0379 344 597</p>
+      <p>🚚 Giao hàng toàn quốc</p>
+      <p>💬 Tư vấn tận tâm</p>
+    </aside>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-amber-900 text-amber-100 text-center py-4 mt-auto">
+  © 2025 Kết Drak Trầm Hương — Thiết kế bởi Đỗ Kết
+</footer>
+
+<!-- SCRIPT -->
+<script>
+  let cart = [];
+
+  function showSection(id) {
+    document.querySelectorAll('section > div').forEach(el => el.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    document.getElementById('cartCount').innerText = cart.length;
+    renderCart();
+  }
+
+  function renderCart() {
+    const list = document.getElementById('cartItems');
+    const total = document.getElementById('totalPrice');
+    list.innerHTML = '';
+    let sum = 0;
+    cart.forEach(item => {
+      sum += item.price;
+      const li = document.createElement('li');
+      li.textContent = `${item.name} - ${item.price.toLocaleString()}đ`;
+      list.appendChild(li);
+    });
+    total.innerText = sum.toLocaleString();
+  }
+</script>
 
 </body>
 </html>
