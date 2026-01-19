@@ -1,228 +1,214 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<title>Kết Drak Trầm Hương – Trầm hương tự nhiên & phong thủy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kết Drak Trầm Hương – Trầm hương tự nhiên 100%, nhang trầm – nụ trầm dùng cho phong thủy, thiền định, thờ cúng.">
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <title>KẾT DRAK TRẦM HƯƠNG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kết Drak Trầm Hương – Trầm hương tự nhiên 100%, phong thủy, thiền định, an lành.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-amber-50 text-gray-800 min-h-screen flex flex-col">
 
 <!-- HEADER -->
 <header class="bg-amber-900 text-amber-100 shadow">
-  <div class="max-w-7xl mx-auto p-4 flex flex-wrap justify-between items-center">
-    <h1 class="font-bold text-xl">KẾT DRAK TRẦM HƯƠNG</h1>
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
+    <h1 class="text-xl font-bold">KẾT DRAK TRẦM HƯƠNG</h1>
     <nav class="flex flex-wrap gap-3 text-sm">
       <button onclick="showSection('gioithieu')">Giới thiệu</button>
       <button onclick="showSection('sanpham')">Sản phẩm</button>
-      <button onclick="showSection('giohang')" class="bg-amber-700 px-3 py-1 rounded">
-        🛒 Giỏ hàng (<span id="cartCount">0</span>)
-      </button>
       <button onclick="showSection('lienhe')">Liên hệ</button>
       <button onclick="showSection('gopy')">Góp ý</button>
       <button onclick="showSection('admin')">Admin</button>
+      <button onclick="showSection('giohang')" class="bg-amber-700 px-3 py-1 rounded">
+        🛒 Giỏ hàng (<span id="cartCount">0</span>)
+      </button>
     </nav>
   </div>
 </header>
 
 <!-- MAIN -->
 <main class="max-w-7xl mx-auto w-full flex-1 p-4">
-<section class="bg-white rounded-xl shadow p-6">
+<section class="bg-white rounded-xl p-6 shadow">
 
 <!-- GIỚI THIỆU -->
 <div id="gioithieu">
-<h2 class="text-2xl font-bold text-amber-900 mb-4">KẾT DRAK TRẦM HƯƠNG</h2>
-<p class="italic text-amber-700 mb-4"><strong>Kết hương dưỡng khí – Phúc chí tâm an</strong></p>
+  <h2 class="text-2xl font-bold text-amber-900 mb-3">KẾT DRAK TRẦM HƯƠNG</h2>
+  <p class="italic text-amber-700 mb-4"><strong>Kết hương dưỡng khí – Phúc chí tâm an</strong></p>
 
-<p class="mb-4">
-<strong>Kết Drak Trầm Hương</strong> ra đời với sứ mệnh mang đến những giá trị
-<strong>thuần khiết – an lành – phong thủy tốt lành</strong> thông qua các sản phẩm
-<strong>trầm hương tự nhiên 100%</strong>.
-</p>
+  <p class="mb-3">
+    <strong>Kết Drak Trầm Hương</strong> ra đời với sứ mệnh mang đến những giá trị
+    <strong>thuần khiết – an lành – phong thủy tốt lành</strong> thông qua các sản phẩm
+    <strong>trầm hương tự nhiên</strong> được tuyển chọn kỹ lưỡng.
+  </p>
 
-<p class="mb-4">
-Chúng tôi tin rằng <strong>trầm hương không chỉ là hương thơm</strong>, mà còn là
-cầu nối giữa <strong>thiên nhiên – tâm thức – năng lượng sống</strong>.
-Mỗi sản phẩm đều được tạo nên bằng <strong>chữ TÂM</strong>.
-</p>
+  <p class="mb-3">
+    Chúng tôi tin rằng trầm hương không chỉ là hương thơm, mà còn là sự kết nối giữa
+    <strong>thiên nhiên – tâm thức – năng lượng sống</strong>.
+  </p>
 
-<h3 class="font-semibold text-lg text-amber-900 mb-2">🌿 Giá trị cốt lõi</h3>
-<ul class="list-disc pl-5 space-y-1">
-<li>Trầm hương tự nhiên – không hóa chất</li>
-<li>Hương thơm thanh khiết – sâu – bền</li>
-<li>Ứng dụng phong thủy – thiền – thờ cúng</li>
-<li>Đặt chữ <strong>TÂM</strong> làm gốc</li>
-</ul>
+  <ul class="list-disc pl-5 space-y-1">
+    <li>Trầm hương tự nhiên 100%</li>
+    <li>Không hóa chất – không hương liệu</li>
+    <li>Ứng dụng phong thủy – thiền định – thờ cúng</li>
+    <li>Lấy chữ <strong>TÂM</strong> làm gốc</li>
+  </ul>
 </div>
 
 <!-- SẢN PHẨM -->
 <div id="sanpham" class="hidden">
-<h2 class="text-2xl font-bold text-amber-900 mb-4">Sản phẩm</h2>
-<div id="productList" class="grid md:grid-cols-3 gap-4"></div>
-</div>
-
-<!-- GIỎ HÀNG -->
-<div id="giohang" class="hidden">
-<h2 class="text-2xl font-bold text-amber-900 mb-4">Giỏ hàng</h2>
-<ul id="cartItems" class="space-y-2"></ul>
-<p class="mt-4 font-bold">Tổng tiền: <span id="totalPrice">0</span>đ</p>
-<button onclick="orderZalo()" class="mt-4 bg-green-600 text-white px-5 py-2 rounded">
-📲 Đặt hàng qua Zalo
-</button>
+  <h2 class="text-2xl font-bold text-amber-900 mb-4">Sản phẩm</h2>
+  <div id="productList" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
 </div>
 
 <!-- LIÊN HỆ -->
 <div id="lienhe" class="hidden">
-<h2 class="text-2xl font-bold text-amber-900 mb-4">Liên hệ</h2>
-<p><strong>Đỗ Kết</strong></p>
-<p>📍 Đồng Dương – Đà Nẵng</p>
-<p>📞 0379 344 597</p>
-<p>💬 Zalo hỗ trợ 24/7</p>
+  <h2 class="text-2xl font-bold text-amber-900 mb-3">Liên hệ</h2>
+  <p><strong>Đỗ Kết</strong></p>
+  <p>📍 Đồng Dương – Đà Nẵng</p>
+  <p>📞 0964 307 247</p>
 </div>
 
 <!-- GÓP Ý -->
 <div id="gopy" class="hidden">
-<h2 class="text-2xl font-bold text-amber-900 mb-4">Góp ý</h2>
-<textarea class="w-full border rounded p-3" rows="4" placeholder="Nhập góp ý của bạn..."></textarea>
-<button class="mt-3 bg-amber-700 text-white px-4 py-2 rounded">
-Gửi góp ý
-</button>
+  <h2 class="text-2xl font-bold text-amber-900 mb-3">Góp ý</h2>
+  <textarea class="w-full border rounded p-3" rows="4" placeholder="Nhập góp ý của bạn..."></textarea>
+  <button class="mt-3 bg-amber-800 text-white px-4 py-2 rounded">Gửi góp ý</button>
 </div>
 
 <!-- ADMIN -->
 <div id="admin" class="hidden">
+  <h2 class="text-2xl font-bold text-amber-900 mb-3">Quản trị Admin</h2>
 
-<div id="loginBox">
-<h2 class="text-2xl font-bold text-amber-900 mb-4">Đăng nhập Admin</h2>
-<input id="user" class="border p-2 w-full mb-2" placeholder="Tên đăng nhập">
-<input id="pass" type="password" class="border p-2 w-full mb-2" placeholder="Mật khẩu">
-<button onclick="login()" class="bg-amber-800 text-white px-4 py-2 rounded">Đăng nhập</button>
+  <div id="loginBox">
+    <input id="user" class="border p-2 w-full mb-2" placeholder="Tên đăng nhập">
+    <input id="pass" type="password" class="border p-2 w-full mb-2" placeholder="Mật khẩu">
+    <button onclick="login()" class="bg-amber-800 text-white px-4 py-2 rounded">
+      Đăng nhập
+    </button>
+  </div>
+
+  <div id="adminPanel" class="hidden mt-4">
+    <input id="pname" class="border p-2 w-full mb-2" placeholder="Tên sản phẩm">
+    <input id="pprice" class="border p-2 w-full mb-2" placeholder="Giá (vd: 150000)">
+    <input id="pimg" class="border p-2 w-full mb-2" placeholder="Link ảnh sản phẩm">
+    <button onclick="addProduct()" class="bg-green-700 text-white px-4 py-2 rounded">
+      Thêm sản phẩm
+    </button>
+  </div>
 </div>
 
-<div id="adminPanel" class="hidden">
-<div class="flex justify-between mb-4">
-<h2 class="text-2xl font-bold text-amber-900">Quản lý sản phẩm</h2>
-<button onclick="logout()" class="text-red-600">Đăng xuất</button>
-</div>
+<!-- GIỎ HÀNG -->
+<div id="giohang" class="hidden">
+  <h2 class="text-2xl font-bold text-amber-900 mb-3">Giỏ hàng</h2>
+  <ul id="cartItems" class="space-y-2"></ul>
+  <p class="mt-3 font-bold">Tổng tiền: <span id="totalPrice">0</span>đ</p>
 
-<input id="pName" class="border p-2 w-full mb-2" placeholder="Tên sản phẩm">
-<input id="pPrice" type="number" class="border p-2 w-full mb-2" placeholder="Giá">
-<button onclick="addProduct()" class="bg-amber-800 text-white px-4 py-2 rounded">
-Thêm sản phẩm
-</button>
-
-<ul id="adminProductList" class="mt-4 space-y-2"></ul>
-</div>
-
+  <button onclick="orderZalo()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded">
+    Đặt hàng qua Zalo
+  </button>
 </div>
 
 </section>
 </main>
 
 <footer class="bg-amber-900 text-amber-100 text-center py-4">
-© 2025 Kết Drak Trầm Hương – Đỗ Kết
+© 2025 Kết Drak Trầm Hương – Thiết kế bởi Đỗ Kết
 </footer>
 
 <script>
-/* ===== ADMIN LOGIN ===== */
-const ADMIN_USER='admin', ADMIN_PASS='123456';
-
-/* ===== DATA ===== */
-let products=JSON.parse(localStorage.getItem('products'))||[
-{name:'Nhang trầm hương',price:150000},
-{name:'Nụ trầm hương',price:120000}
+let products = [
+  { name: 'Nhang trầm hương', price: 150000, img: 'https://via.placeholder.com/400x300' },
+  { name: 'Nụ trầm hương', price: 120000, img: 'https://via.placeholder.com/400x300' }
 ];
-let cart=JSON.parse(localStorage.getItem('cart'))||[];
 
-/* ===== SECTION ===== */
+let cart = [];
+
 function showSection(id){
-document.querySelectorAll('section > div').forEach(d=>d.classList.add('hidden'));
-document.getElementById(id).classList.remove('hidden');
+  document.querySelectorAll('section > div').forEach(d => d.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
 }
 
-/* ===== LOGIN ===== */
-function login(){
-if(user.value===ADMIN_USER&&pass.value===ADMIN_PASS){
-sessionStorage.setItem('admin','1'); renderAdminUI();
-}else alert('Sai tài khoản hoặc mật khẩu');
-}
-function logout(){sessionStorage.removeItem('admin'); renderAdminUI();}
-function renderAdminUI(){
-loginBox.classList.toggle('hidden',sessionStorage.getItem('admin'));
-adminPanel.classList.toggle('hidden',!sessionStorage.getItem('admin'));
-}
-
-/* ===== PRODUCTS ===== */
 function renderProducts(){
-productList.innerHTML='';
-products.forEach((p,i)=>{
-productList.innerHTML+=`
-<div class="border rounded p-4 text-center">
-<h3 class="font-semibold">${p.name}</h3>
-<p class="font-bold">${p.price.toLocaleString()}đ</p>
-<button onclick="addToCart(${i})" class="mt-2 bg-amber-800 text-white px-4 py-2 rounded">
-Thêm vào giỏ
-</button>
-</div>`;
-});
+  const box = document.getElementById('productList');
+  box.innerHTML = '';
+  products.forEach(p => {
+    box.innerHTML += `
+      <div class="border rounded p-3 text-center">
+        <img src="${p.img}" class="w-full h-40 object-cover mb-2 rounded">
+        <h3 class="font-semibold">${p.name}</h3>
+        <p class="font-bold">${p.price.toLocaleString()}đ</p>
+        <button onclick="addToCart('${p.name}', ${p.price})"
+          class="mt-2 bg-amber-800 text-white px-3 py-1 rounded">
+          Thêm vào giỏ
+        </button>
+      </div>`;
+  });
 }
 
-/* ===== CART ===== */
-function addToCart(i){cart.push(products[i]); saveCart();}
-function removeCart(i){cart.splice(i,1); saveCart();}
-function saveCart(){localStorage.setItem('cart',JSON.stringify(cart)); renderCart();}
+function addToCart(name, price){
+  cart.push({name, price});
+  document.getElementById('cartCount').innerText = cart.length;
+  renderCart();
+}
+
 function renderCart(){
-cartItems.innerHTML=''; let sum=0;
-cart.forEach((c,i)=>{
-sum+=c.price;
-cartItems.innerHTML+=`
-<li class="flex justify-between">
-${c.name} - ${c.price.toLocaleString()}đ
-<button onclick="removeCart(${i})" class="text-red-600">X</button>
-</li>`;
-});
-totalPrice.innerText=sum.toLocaleString();
-cartCount.innerText=cart.length;
+  const list = document.getElementById('cartItems');
+  const total = document.getElementById('totalPrice');
+  list.innerHTML = '';
+  let sum = 0;
+
+  cart.forEach((item, i) => {
+    sum += item.price;
+    list.innerHTML += `
+      <li class="flex justify-between">
+        ${item.name} - ${item.price.toLocaleString()}đ
+        <button onclick="removeItem(${i})" class="text-red-600">Xóa</button>
+      </li>`;
+  });
+
+  total.innerText = sum.toLocaleString();
 }
 
-/* ===== ORDER ZALO ===== */
+function removeItem(i){
+  cart.splice(i,1);
+  document.getElementById('cartCount').innerText = cart.length;
+  renderCart();
+}
+
 function orderZalo(){
-if(!cart.length) return alert('Giỏ hàng trống');
-let msg='ĐƠN HÀNG KẾT DRAK TRẦM HƯƠNG%0A';
-let sum=0;
-cart.forEach(c=>{msg+=`- ${c.name}: ${c.price.toLocaleString()}đ%0A`; sum+=c.price;});
-msg+=`Tổng: ${sum.toLocaleString()}đ`;
-window.open(`https://zalo.me/0379344597?text=${msg}`,'_blank');
+  let text = 'ĐƠN HÀNG KẾT DRAK TRẦM HƯƠNG%0A';
+  let sum = 0;
+  cart.forEach(i => {
+    text += `- ${i.name}: ${i.price.toLocaleString()}đ%0A`;
+    sum += i.price;
+  });
+  text += `TỔNG TIỀN: ${sum.toLocaleString()}đ`;
+  window.open(`https://zalo.me/0964307247?text=${text}`, '_blank');
 }
 
-/* ===== ADMIN PRODUCT ===== */
+function login(){
+  if(user.value === 'admin' && pass.value === '123456'){
+    loginBox.classList.add('hidden');
+    adminPanel.classList.remove('hidden');
+  } else {
+    alert('Sai tài khoản hoặc mật khẩu');
+  }
+}
+
 function addProduct(){
-if(!pName.value||!pPrice.value) return;
-products.push({name:pName.value,price:+pPrice.value});
-localStorage.setItem('products',JSON.stringify(products));
-pName.value=pPrice.value='';
-renderProducts(); renderAdminList();
-}
-function removeProduct(i){
-products.splice(i,1);
-localStorage.setItem('products',JSON.stringify(products));
-renderProducts(); renderAdminList();
-}
-function renderAdminList(){
-adminProductList.innerHTML='';
-products.forEach((p,i)=>{
-adminProductList.innerHTML+=`
-<li class="flex justify-between">
-${p.name} - ${p.price.toLocaleString()}đ
-<button onclick="removeProduct(${i})" class="text-red-600">Xóa</button>
-</li>`;
-});
+  products.push({
+    name: pname.value,
+    price: Number(pprice.value),
+    img: pimg.value
+  });
+  pname.value = pprice.value = pimg.value = '';
+  renderProducts();
+  alert('Đã thêm sản phẩm');
 }
 
-/* INIT */
-renderProducts(); renderCart(); renderAdminList(); renderAdminUI();
+renderProducts();
 </script>
 
 </body>
